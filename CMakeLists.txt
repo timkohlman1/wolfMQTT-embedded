@@ -11,7 +11,7 @@ list(REMOVE_ITEM WOLFMQTT_SOURCES
 idf_component_register(
     SRCS ${WOLFMQTT_SOURCES}
     INCLUDE_DIRS "."
-    REQUIRES wolfssl lwip
+    REQUIRES wolfssl lwip freertos
 )
 
 # Force-include lwip errno so EAGAIN/EWOULDBLOCK resolve in mqtt_socket.c
